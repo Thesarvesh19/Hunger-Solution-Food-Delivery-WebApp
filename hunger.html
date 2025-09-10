@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Hunger Solution | Premium Food Delivery</title>
+    <link rel="stylesheet" href="hunger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="#home" class="header__logo">The Hunger Solution</a>
+        <nav class="header__nav">
+            <a href="#favorites">Favorites</a>
+            <div class="nav-item dropdown">
+                <a href="#menu" class="dropdown__toggle">Menu ▾</a>
+                <div class="dropdown__menu">
+                    <a href="#menu" data-filter="all">All Dishes</a>
+                    <a href="#menu" data-filter="Pizza">Pizza</a>
+                    <a href="#menu" data-filter="Burgers">Burgers</a>
+                    <a href="#menu" data-filter="Indian">Indian</a>
+                    <a href="#menu" data-filter="Asian">Asian</a>
+                    <a href="#menu" data-filter="Desserts">Desserts</a>
+                </div>
+            </div>
+            <a href="#reviews">Reviews</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="header__actions">
+            <button id="cartButton" class="header__action-btn" aria-label="Open cart">
+                🛒 <span id="cart-count-badge" class="cart-badge">0</span>
+            </button>
+            <button id="themeToggle" class="header__action-btn" aria-label="Toggle dark mode">🌙</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <h1 class="hero-title">Your Hunger, Solved.</h1>
+            <p class="hero-subtitle">Exquisite flavors, premium ingredients, and lightning-fast delivery. Indulge in perfection.</p>
+            <a href="#menu" class="hero-cta">View Full Menu</a>
+        </section>
+
+        <!-- Customer Favorites Section -->
+        <section id="favorites" class="content-section">
+            <h2 class="section-title">Customer Favorites</h2>
+            <p class="section-subtitle">Handpicked by our patrons, these are the dishes that define The Hunger Solution experience.</p>
+            <div id="favorites-grid" class="favorites-grid">
+                <!-- Favorite dish cards will be injected by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Menu/Dishes Section -->
+        <section id="menu" class="content-section">
+            <h2 class="section-title">Our Exquisite Menu</h2>
+            <div id="dish-filters" class="dish-filters">
+               
+            </div>
+            <div id="dishes-grid" class="dishes-grid">
+            </div>
+        </section>
+
+        <!-- Customer Reviews Section -->
+        <section id="reviews" class="content-section">
+            <div class="reviews-section">
+                <h2 class="section-title">Words From Our Customers</h2>
+                <p class="section-subtitle">We thrive on feedback. Here's what people are saying about their experience with us.</p>
+                <div id="reviews-container" class="reviews-container">
+                    <!-- Review cards will be injected by JavaScript -->
+                </div>
+                <div class="review-form-container">
+                    <h3>Leave Your Review</h3>
+                    <form id="reviewForm">
+                        <div class="star-rating">
+                            <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="5 stars">★</label>
+                            <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 stars">★</label>
+                            <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 stars">★</label>
+                            <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 stars">★</label>
+                            <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 star">★</label>
+                        </div>
+                        <input type="text" name="author" placeholder="Your Name" required class="form-input">
+                        <textarea name="comment" rows="4" placeholder="Your thoughts..." required class="form-textarea"></textarea>
+                        <button type="submit" class="form-button" style="margin-top: 1.5rem;">Submit Review</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Us Section -->
+        <section id="about" class="content-section">
+            <h2 class="section-title">Our Story</h2>
+            <div class="about-container">
+                <img src="images/my logo.png" class="about-image" />
+                <div class="about-content">
+                    <p class="about-text">
+                        Founded by <strong>Sarvesh Soumil</strong>, The Hunger Solution was born from a desire to blend culinary art with the convenience of modern delivery. We believe that great food shouldn't be confined to restaurant tables. Our team is dedicated to sourcing the finest local ingredients and crafting unforgettable dishes that bring joy to your home.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact" class="content-section">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-subtitle">Have a question or a special request? Drop us a line!</p>
+            <div class="contact-container">
+                <div class="contact-details">
+                    <h3>Get in Touch Directly</h3>
+                    <p><strong>Phone:</strong> <a href="tel:+9194731087XX">+91 9194731087XX</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:contact@thehungersolution.com">contact@thehungersolution.com</a></p>
+                    <p><strong>Address:</strong> 123 Foodie Lane, Kolkata, West Bengal</p>
+                    <p><strong>Hours:</strong> Mon - Sun, 10:00 AM - 11:00 PM</p>
+                </div>
+                <div class="contact-form-wrapper">
+                    <h3>Send us a Message</h3>
+                    <form id="contactForm">
+                        <input type="text" name="name" placeholder="Your Name" required class="form-input">
+                        <input type="email" name="email" placeholder="Your Email" required class="form-input">
+                        <textarea name="message" rows="5" placeholder="Your Message" required class="form-textarea"></textarea>
+                        <button type="submit" class="form-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        &copy; <span id="year"></span> The Hunger Solution by Sarvesh Soumil. All Rights Reserved.
+    </footer>
+
+    <!-- Cart Ka Sidebar -->
+    <aside id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button id="closeCartBtn" class="close-btn">&times;</button>
+        </div>
+        <div id="cartItemsContainer" class="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+            <button id="checkoutBtn" class="form-button">Proceed to Checkout</button>
+        </div>
+    </aside>
+
+    <!-- Checkout ka section -->
+    <div id="checkoutModal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="closeModalBtn" class="close-btn">&times;</button>
+            <div id="step1" class="modal-step">
+                <h3 class="modal-title">Shipping Details</h3>
+                <form id="addressForm">
+                    <input type="text" id="custName" placeholder="Full Name" required class="form-input">
+                    <input type="email" id="custEmail" placeholder="Email" required class="form-input">
+                    <input type="tel" id="custPhone" placeholder="10-digit Phone Number" required pattern="[0-9]{10}" class="form-input">
+                    <textarea id="custAddress" placeholder="Full Shipping Address" rows="3" required class="form-textarea"></textarea>
+                    <button type="submit" class="form-button">Continue to Payment</button>
+                </form>
+            </div>
+            <div id="step2" class="modal-step" style="display: none;">
+                <h3 class="modal-title">Payment Method</h3>
+                <form id="paymentForm">
+                    <div class="payment-options">
+                         <label><input type="radio" name="payment" value="Credit Card" required> Credit Card</label>
+                         <label><input type="radio" name="payment" value="Debit Card"> Debit Card</label>
+                         <label><input type="radio" name="payment" value="UPI"> UPI</label>
+                         <label><input type="radio" name="payment" value="Cash on Delivery"> Cash on Delivery</label>
+                    </div>
+                    <button type="submit" class="form-button">Place Order</button>
+                </form>
+            </div>
+            <div id="step3" class="modal-step" style="display: none;">
+                <h3 class="modal-title">🎉 Order Confirmed!</h3>
+                <pre id="receipt" class="receipt"></pre>
+                <button id="finishBtn" class="form-button" style="margin-top: 1.5rem;">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <!--Notification Container -->
+    <div id="toastContainer"></div>
+
+    <script src="hunger.js"></script>
+</body>
+</html>
